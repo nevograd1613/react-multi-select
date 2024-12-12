@@ -1,9 +1,9 @@
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 
 const common = require("./webpack.common.js");
-const { definePlugin } = require("./plugins");
+const { definePlugin, ignorePlugin } = require("./plugins");
 
 module.exports = merge(common, {
-  plugins: [definePlugin("dev")],
+  plugins: [definePlugin("dev"), ignorePlugin], // Добавляем ignorePlugin
   devtool: "inline-source-map",
 });

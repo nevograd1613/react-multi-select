@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CloseIcon from "react-icons/lib/md/close";
+import { MdClose } from "react-icons/md";
 import IconButton from "@material-ui/core/IconButton";
 import ItemLabel from "./item_label";
 import classnames from "classnames";
@@ -11,14 +11,14 @@ const SelectedItem = ({ item, height, group, disabled }) => (
     className={classnames({
       [styles.with_grouping]: group,
       [styles.selected_item]: !group,
-      [styles.disabled]: disabled
+      [styles.disabled]: disabled,
     })}
     style={{ height }}
   >
     <ItemLabel label={item.label} />
     {!group && !disabled && (
       <IconButton>
-        <CloseIcon />
+        <MdClose />
       </IconButton>
     )}
   </div>
@@ -27,12 +27,12 @@ const SelectedItem = ({ item, height, group, disabled }) => (
 SelectedItem.propTypes = {
   item: PropTypes.object,
   height: PropTypes.number,
-  isLocked: PropTypes.func
+  isLocked: PropTypes.func,
 };
 
 SelectedItem.defaultProps = {
   item: {},
-  height: 40
+  height: 40,
 };
 
 export default SelectedItem;
