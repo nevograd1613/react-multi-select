@@ -1,9 +1,6 @@
 import React from "react";
+import "./column.scss";
 
-import styles from "./column.scss";
-
-const Column = ({ children }) => (
-  <div className={styles.column}>{children}</div>
-);
+const Column = ({ children }) => <div className="column">{children}</div>;
 
 export default Column;
