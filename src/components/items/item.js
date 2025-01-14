@@ -4,7 +4,7 @@ import classnames from "classnames";
 import Checkbox from "@material-ui/core/Checkbox";
 import ItemLabel from "./item_label";
 
-import styles from "./item.scss";
+import * as styles from "./item.scss";
 
 const Item = ({
   item,
@@ -14,14 +14,14 @@ const Item = ({
   group,
   checked,
   indeterminate,
-  disabled
+  disabled,
 }) => (
   <div
     className={classnames(styles.item, {
       [styles.with_border]: withBorder,
       [styles.selected]: checked,
       [styles.disabled]: disabled,
-      [styles.with_grouping]: group
+      [styles.with_grouping]: group,
     })}
     style={{ height }}
     onClick={onClick}
@@ -46,7 +46,7 @@ Item.propTypes = {
   withBorder: PropTypes.bool,
   checked: PropTypes.bool,
   indeterminate: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 Item.defaultProps = {
@@ -55,7 +55,7 @@ Item.defaultProps = {
   withBorder: false,
   checked: false,
   indeterminate: false,
-  disabled: false
+  disabled: false,
 };
 
 export default Item;

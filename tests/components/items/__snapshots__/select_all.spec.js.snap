@@ -7,7 +7,7 @@ exports[`SelectAll default snapshot 1`] = `
   height={40}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -23,7 +23,7 @@ exports[`SelectAll snapshot with empty selectedIds with select all 1`] = `
   height={40}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -39,7 +39,7 @@ exports[`SelectAll snapshot with empty selectedIds without select all 1`] = `
   height={40}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -55,7 +55,7 @@ exports[`SelectAll snapshot with height 1`] = `
   height={20}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -71,7 +71,7 @@ exports[`SelectAll snapshot with isSelectAll 1`] = `
   height={40}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -87,7 +87,7 @@ exports[`SelectAll snapshot with isSelectAll false 1`] = `
   height={40}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -103,7 +103,7 @@ exports[`SelectAll snapshot with selectAllMessage 1`] = `
   height={40}
   indeterminate={false}
   item={
-    Object {
+    {
       "label": "some test message",
     }
   }
@@ -119,7 +119,7 @@ exports[`SelectAll snapshot with selectedIds with select all should be indetermi
   height={40}
   indeterminate={true}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }
@@ -135,7 +135,7 @@ exports[`SelectAll snapshot with selectedIds without select all should be indete
   height={40}
   indeterminate={true}
   item={
-    Object {
+    {
       "label": "Select All",
     }
   }

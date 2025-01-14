@@ -6,7 +6,7 @@ exports[`List default snapshot 1`] = `
   className="list"
   estimatedRowSize={30}
   height={400}
-  items={Array []}
+  items={[]}
   noRowsRenderer={[Function]}
   onRowsRendered={[Function]}
   onScroll={[Function]}
@@ -17,7 +17,7 @@ exports[`List default snapshot 1`] = `
   rowRenderer={[Function]}
   scrollToAlignment="auto"
   scrollToIndex={-1}
-  style={Object {}}
+  style={{}}
   width={100}
 />
 `;
@@ -28,7 +28,7 @@ exports[`List snapshot with height 1`] = `
   className="list"
   estimatedRowSize={30}
   height={200}
-  items={Array []}
+  items={[]}
   noRowsRenderer={[Function]}
   onRowsRendered={[Function]}
   onScroll={[Function]}
@@ -39,7 +39,7 @@ exports[`List snapshot with height 1`] = `
   rowRenderer={[Function]}
   scrollToAlignment="auto"
   scrollToIndex={-1}
-  style={Object {}}
+  style={{}}
   width={100}
 />
 `;
@@ -50,7 +50,7 @@ exports[`List snapshot with offset 1`] = `
   className="list"
   estimatedRowSize={30}
   height={400}
-  items={Array []}
+  items={[]}
   noRowsRenderer={[Function]}
   onRowsRendered={[Function]}
   onScroll={[Function]}
@@ -61,7 +61,7 @@ exports[`List snapshot with offset 1`] = `
   rowRenderer={[Function]}
   scrollToAlignment="auto"
   scrollToIndex={-1}
-  style={Object {}}
+  style={{}}
   width={96}
 />
 `;
@@ -72,7 +72,7 @@ exports[`List snapshot with rowHeight 1`] = `
   className="list"
   estimatedRowSize={30}
   height={400}
-  items={Array []}
+  items={[]}
   noRowsRenderer={[Function]}
   onRowsRendered={[Function]}
   onScroll={[Function]}
@@ -83,7 +83,7 @@ exports[`List snapshot with rowHeight 1`] = `
   rowRenderer={[Function]}
   scrollToAlignment="auto"
   scrollToIndex={-1}
-  style={Object {}}
+  style={{}}
   width={100}
 />
 `;

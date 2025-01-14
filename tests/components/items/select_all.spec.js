@@ -1,5 +1,5 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 import { shallow } from "enzyme";
 
 import SelectAll from "../../../src/components/items/select_all";
@@ -16,7 +16,7 @@ describe("SelectAll", () => {
   test("snapshot with selectAllMessage", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectAll selectAllMessage="some test message" />
+      <SelectAll selectAllMessage="some test message" />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -36,7 +36,7 @@ describe("SelectAll", () => {
   test("snapshot with empty selectedIds with select all", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectAll selectedIds={[]} isSelectAll={true} />
+      <SelectAll selectedIds={[]} isSelectAll={true} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -44,7 +44,7 @@ describe("SelectAll", () => {
   test("snapshot with selectedIds with select all should be indeterminate", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectAll selectedIds={[1]} isSelectAll={true} />
+      <SelectAll selectedIds={[1]} isSelectAll={true} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -52,7 +52,7 @@ describe("SelectAll", () => {
   test("snapshot with empty selectedIds without select all", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectAll selectedIds={[]} isSelectAll={false} />
+      <SelectAll selectedIds={[]} isSelectAll={false} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -60,7 +60,7 @@ describe("SelectAll", () => {
   test("snapshot with selectedIds without select all should be indeterminate", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectAll selectedIds={[1]} isSelectAll={false} />
+      <SelectAll selectedIds={[1]} isSelectAll={false} />,
     );
     expect(tree).toMatchSnapshot();
   });

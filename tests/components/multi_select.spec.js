@@ -1,10 +1,10 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 import skinDeep from "skin-deep";
 import { mount } from "enzyme";
 
 import MultiSelectWithState, {
-  MultiSelect
+  MultiSelect,
 } from "../../src/components/multi_select";
 import { SearchWithValue } from "../../src/components/search/search";
 import { createGenerateClassName } from "@material-ui/core/styles";
@@ -12,7 +12,7 @@ import SourceList from "../../src/components/source_list";
 
 const generateClassName = createGenerateClassName({
   dangerouslyUseGlobalCSS: true,
-  productionPrefix: "c"
+  productionPrefix: "c",
 });
 
 const CustomComponent = jest
@@ -25,7 +25,7 @@ const custom_messages = {
   noneSelectedMessage: "Nothing",
   selectedMessage: "Checked",
   selectAllMessage: "Check all",
-  clearAllMessage: "Uncheck all"
+  clearAllMessage: "Uncheck all",
 };
 
 const selectAllItems = jest.fn().mockName("selectAllItems");
@@ -45,7 +45,7 @@ describe("MultiSelect", () => {
     test("custom selectAllRenderer", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect selectAllRenderer={CustomComponent} />
+        <MultiSelect selectAllRenderer={CustomComponent} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -53,7 +53,7 @@ describe("MultiSelect", () => {
     test("custom searchRenderer", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect searchRenderer={CustomComponent} />
+        <MultiSelect searchRenderer={CustomComponent} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -61,7 +61,7 @@ describe("MultiSelect", () => {
     test("custom noItemsRenderer", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect noItemsRenderer={CustomComponent} />
+        <MultiSelect noItemsRenderer={CustomComponent} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -69,7 +69,7 @@ describe("MultiSelect", () => {
     test("custom itemRenderer", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect itemRenderer={CustomComponent} />
+        <MultiSelect itemRenderer={CustomComponent} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -77,7 +77,7 @@ describe("MultiSelect", () => {
     test("custom listRenderer", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect listRenderer={CustomComponent} />
+        <MultiSelect listRenderer={CustomComponent} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -103,7 +103,7 @@ describe("MultiSelect", () => {
     test("passes disabled if maxSelectedItem has passed", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={2} />
+        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={2} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -111,7 +111,7 @@ describe("MultiSelect", () => {
     test("does not pass disabled if maxSelectedItem has passed", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={4} />
+        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={4} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -119,7 +119,7 @@ describe("MultiSelect", () => {
     test("passed selectAllItems", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect selectAllItems={selectAllItems} />
+        <MultiSelect selectAllItems={selectAllItems} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -127,7 +127,7 @@ describe("MultiSelect", () => {
     test("passed filterItems", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect selectAllItems={filterItems} />
+        <MultiSelect selectAllItems={filterItems} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -141,7 +141,7 @@ describe("MultiSelect", () => {
     test("passed unselectItems", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect unselectItems={unselectItems} />
+        <MultiSelect unselectItems={unselectItems} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -173,7 +173,7 @@ describe("MultiSelect", () => {
     test("displays custom Loader when loading", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect loading={true} loaderRenderer={CustomComponent} />
+        <MultiSelect loading={true} loaderRenderer={CustomComponent} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -199,7 +199,7 @@ describe("MultiSelect", () => {
     test("will pass selectAllHeight", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect itemHeight={60} selectAllHeight={40} />
+        <MultiSelect itemHeight={60} selectAllHeight={40} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -219,7 +219,7 @@ describe("MultiSelect", () => {
           searchValue=""
           searchValueChanged={searchValueChanged}
           searchIcon="div"
-        />
+        />,
       );
 
       tree
@@ -236,7 +236,7 @@ describe("MultiSelect", () => {
     test("with responsiveHeight", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelectWithState responsiveHeight={"70%"} />
+        <MultiSelectWithState responsiveHeight={"70%"} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -244,7 +244,7 @@ describe("MultiSelect", () => {
     test("with generateClassName", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(
-        <MultiSelect generateClassName={generateClassName} />
+        <MultiSelect generateClassName={generateClassName} />,
       );
       expect(tree).toMatchSnapshot();
     });
@@ -270,7 +270,7 @@ describe("MultiSelect", () => {
 
     test("custom selectAllRenderer", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectAllRenderer={CustomComponent} />
+        <MultiSelect selectAllRenderer={CustomComponent} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -278,7 +278,7 @@ describe("MultiSelect", () => {
 
     test("custom searchRenderer", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect searchRenderer={CustomComponent} />
+        <MultiSelect searchRenderer={CustomComponent} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -286,7 +286,7 @@ describe("MultiSelect", () => {
 
     test("custom noItemsRenderer", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect noItemsRenderer={CustomComponent} />
+        <MultiSelect noItemsRenderer={CustomComponent} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -294,7 +294,7 @@ describe("MultiSelect", () => {
 
     test("custom itemRenderer", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect itemRenderer={CustomComponent} />
+        <MultiSelect itemRenderer={CustomComponent} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -302,7 +302,7 @@ describe("MultiSelect", () => {
 
     test("custom listRenderer", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect listRenderer={CustomComponent} />
+        <MultiSelect listRenderer={CustomComponent} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -310,7 +310,7 @@ describe("MultiSelect", () => {
 
     test("custom messages", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect messages={custom_messages} />
+        <MultiSelect messages={custom_messages} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -324,7 +324,7 @@ describe("MultiSelect", () => {
 
     test("passed selectedItems", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectedItems={[1, 2]} />
+        <MultiSelect selectedItems={[1, 2]} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -332,7 +332,7 @@ describe("MultiSelect", () => {
 
     test("passes disabled if maxSelectedItem has passed", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={2} />
+        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={2} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -340,7 +340,7 @@ describe("MultiSelect", () => {
 
     test("does not pass disabled if maxSelectedItem has passed", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={4} />
+        <MultiSelect selectedItems={[1, 2]} maxSelectedItems={4} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -348,7 +348,7 @@ describe("MultiSelect", () => {
 
     test("passed selectAllItems", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectAllItems={selectAllItems} />
+        <MultiSelect selectAllItems={selectAllItems} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -356,7 +356,7 @@ describe("MultiSelect", () => {
 
     test("passed filterItems", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectAllItems={filterItems} />
+        <MultiSelect selectAllItems={filterItems} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -364,7 +364,7 @@ describe("MultiSelect", () => {
 
     test("passed selectItem", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectAllItems={selectItem} />
+        <MultiSelect selectAllItems={selectItem} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -372,7 +372,7 @@ describe("MultiSelect", () => {
 
     test("passed unselectItems", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect unselectItems={unselectItems} />
+        <MultiSelect unselectItems={unselectItems} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -386,7 +386,7 @@ describe("MultiSelect", () => {
 
     test("can remove select all", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect showSelectAll={false} />
+        <MultiSelect showSelectAll={false} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -400,7 +400,7 @@ describe("MultiSelect", () => {
 
     test("can remove selected items", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect showSelectedItems={false} />
+        <MultiSelect showSelectedItems={false} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -414,7 +414,7 @@ describe("MultiSelect", () => {
 
     test("will pass selectedItemHeight", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect selectedItemHeight={60} />
+        <MultiSelect selectedItemHeight={60} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();
@@ -422,7 +422,7 @@ describe("MultiSelect", () => {
 
     test("will pass selectAllHeight", () => {
       const tree = skinDeep.shallowRender(
-        <MultiSelect itemHeight={60} selectAllHeight={40} />
+        <MultiSelect itemHeight={60} selectAllHeight={40} />,
       );
       const deepTree = tree.dive([SourceList]);
       expect(deepTree.props).toMatchSnapshot();

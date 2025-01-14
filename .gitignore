@@ -10,3 +10,6 @@ out
 coverage
 test/report.xml
 junit.xml
+
+/dist
+yarn-error.log

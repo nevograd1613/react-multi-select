@@ -10,7 +10,7 @@ import withResponsiveHeight from "./with_responsive_height";
 import SourceList from "./source_list";
 import DestinationList from "./destination_list";
 
-import styles from "./multi_select.scss";
+import * as styles from "./multi_select.scss";
 import Loader from "./loader/loader";
 
 const jss = create(jssPreset());

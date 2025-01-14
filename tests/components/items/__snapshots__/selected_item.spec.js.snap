@@ -4,7 +4,7 @@ exports[`SelectedItem default snapshot 1`] = `
 <div
   className="selected_item"
   style={
-    Object {
+    {
       "height": 40,
     }
   }
@@ -22,7 +22,7 @@ exports[`SelectedItem snapshot with disabled item 1`] = `
 <div
   className="selected_item"
   style={
-    Object {
+    {
       "height": 40,
     }
   }
@@ -40,7 +40,7 @@ exports[`SelectedItem snapshot with group item 1`] = `
 <div
   className="with_grouping"
   style={
-    Object {
+    {
       "height": 40,
     }
   }
@@ -55,7 +55,7 @@ exports[`SelectedItem snapshot with height 1`] = `
 <div
   className="selected_item"
   style={
-    Object {
+    {
       "height": 20,
     }
   }
@@ -73,7 +73,7 @@ exports[`SelectedItem snapshot with valid item 1`] = `
 <div
   className="selected_item"
   style={
-    Object {
+    {
       "height": 40,
     }
   }

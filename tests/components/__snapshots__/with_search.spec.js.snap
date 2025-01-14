@@ -3,15 +3,15 @@
 exports[`With search Case custom search component 1`] = `
 <CustomComponent
   filteredItems={
-    Array [
-      Object {
+    [
+      {
         "id": 11,
         "label": "item-11",
       },
     ]
   }
   messages={
-    Object {
+    {
       "searchPlaceholder": "Search",
     }
   }
@@ -33,15 +33,15 @@ exports[`With search Case custom search component 1`] = `
 exports[`With search Case default search component 1`] = `
 <CustomComponent
   filteredItems={
-    Array [
-      Object {
+    [
+      {
         "id": 1,
         "label": "item-1",
       },
     ]
   }
   messages={
-    Object {
+    {
       "searchPlaceholder": "Search",
     }
   }
@@ -63,7 +63,7 @@ exports[`With search Case default search component 1`] = `
 exports[`With search Case not search component 1`] = `
 <CustomComponent
   messages={
-    Object {
+    {
       "searchPlaceholder": "Search",
     }
   }

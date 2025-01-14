@@ -1,5 +1,5 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 
 import WithSourceList, { SourceList } from "../../src/components/source_list";
 
@@ -13,7 +13,7 @@ const custom_messages = {
   noneSelectedMessage: "Nothing",
   selectedMessage: "Checked",
   selectAllMessage: "Check all",
-  clearAllMessage: "Uncheck all"
+  clearAllMessage: "Uncheck all",
 };
 
 const selectAllItems = jest.fn().mockName("selectAllItems");
@@ -30,7 +30,7 @@ describe("SourceList", () => {
   test("custom selectAllRenderer", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SourceList selectAllRenderer={CustomComponent} />
+      <SourceList selectAllRenderer={CustomComponent} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -38,7 +38,7 @@ describe("SourceList", () => {
   test("custom searchRenderer", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SourceList searchRenderer={CustomComponent} />
+      <SourceList searchRenderer={CustomComponent} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -46,7 +46,7 @@ describe("SourceList", () => {
   test("custom noItemsRenderer", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SourceList noItemsRenderer={CustomComponent} />
+      <SourceList noItemsRenderer={CustomComponent} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -78,7 +78,7 @@ describe("SourceList", () => {
   test("passed selectAllItems", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SourceList selectAllItems={selectAllItems} />
+      <SourceList selectAllItems={selectAllItems} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -112,7 +112,7 @@ describe("SourceList", () => {
     const tree = renderer.render(
       <SourceList
         messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -126,7 +126,7 @@ describe("SourceList", () => {
   test("will pass selectAllHeight", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SourceList itemHeight={10} selectAllHeight={60} />
+      <SourceList itemHeight={10} selectAllHeight={60} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -144,10 +144,10 @@ describe("SourceList", () => {
         filteredItems={[
           { id: 1, label: "item1", group: "group1" },
           { id: 2, label: "item2", group: "group2" },
-          { id: 3, label: "item3", group: "group1" }
+          { id: 3, label: "item3", group: "group1" },
         ]}
         withGrouping
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -167,7 +167,7 @@ describe("SourceList", () => {
         selectedItems={[1]}
         itemRenderer={CustomComponent}
         messages={custom_messages}
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });

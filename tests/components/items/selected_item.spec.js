@@ -1,5 +1,5 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 
 import SelectedItem from "../../../src/components/items/selected_item";
 
@@ -33,7 +33,7 @@ describe("SelectedItem", () => {
   test("snapshot with disabled item", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectedItem item={{ id: 1, label: "item 1", disabled: true }} />
+      <SelectedItem item={{ id: 1, label: "item 1", disabled: true }} />,
     );
     expect(tree).toMatchSnapshot();
   });

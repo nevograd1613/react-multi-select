@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./selection_status.scss";
+import * as styles from "./selection_status.scss";
 
 const SelectionStatus = ({
   selected,
   clearAll,
   clearAllMessage,
   noneSelectedMessage,
-  selectedMessage
+  selectedMessage,
 }) => (
   <div className={styles.selection_status}>
     <div className={styles.status}>
@@ -27,14 +27,14 @@ SelectionStatus.propTypes = {
   clearAll: PropTypes.func,
   clearAllMessage: PropTypes.string,
   noneSelectedMessage: PropTypes.string,
-  selectedMessage: PropTypes.string
+  selectedMessage: PropTypes.string,
 };
 
 SelectionStatus.defaultProps = {
   selected: [],
   clearAllMessage: "Clear All",
   noneSelectedMessage: "None Selected",
-  selectedMessage: "selected"
+  selectedMessage: "selected",
 };
 
 export default SelectionStatus;

@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 
 import WithDestinationList, {
-  DestinationList
+  DestinationList,
 } from "../../src/components/destination_list";
 import List from "../../src/components/list/items_list";
 
@@ -17,7 +17,7 @@ const custom_messages = {
   noneSelectedMessage: "Nothing",
   selectedMessage: "Checked",
   selectAllMessage: "Check all",
-  clearAllMessage: "Uncheck all"
+  clearAllMessage: "Uncheck all",
 };
 
 const unselectItems = jest.fn().mockName("unselectItems");
@@ -34,7 +34,7 @@ describe("DestinationList", () => {
   test("custom selectionStatusRenderer", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList selectionStatusRenderer={CustomComponent} />
+      <DestinationList selectionStatusRenderer={CustomComponent} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -42,7 +42,7 @@ describe("DestinationList", () => {
   test("custom selectedItemRenderer", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList selectedItemRenderer={CustomComponent} />
+      <DestinationList selectedItemRenderer={CustomComponent} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -50,7 +50,7 @@ describe("DestinationList", () => {
   test("custom noItemsRenderer", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList noItemsRenderer={CustomComponent} />
+      <DestinationList noItemsRenderer={CustomComponent} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -58,7 +58,7 @@ describe("DestinationList", () => {
   test("custom messages", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList messages={custom_messages} />
+      <DestinationList messages={custom_messages} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -66,7 +66,7 @@ describe("DestinationList", () => {
   test("passed unselectItems", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList unselectItems={unselectItems} />
+      <DestinationList unselectItems={unselectItems} />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -96,10 +96,10 @@ describe("DestinationList", () => {
         selectedItems={[
           { id: 1, label: "item1", group: "group1" },
           { id: 2, label: "item2", group: "group2" },
-          { id: 3, label: "item3", group: "group1" }
+          { id: 3, label: "item3", group: "group1" },
         ]}
         withGrouping
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -107,7 +107,7 @@ describe("DestinationList", () => {
   test("passed selectedItems with grouping and empty items", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList selectedItems={[]} withGrouping />
+      <DestinationList selectedItems={[]} withGrouping />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -128,7 +128,7 @@ describe("DestinationList", () => {
         messages={custom_messages}
         searchIcon="custom_path_icon"
         searchValue="1"
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -142,7 +142,7 @@ describe("DestinationList", () => {
         messages={custom_messages}
         searchIcon="custom_path_icon"
         searchValue="1"
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });

@@ -6,7 +6,7 @@ exports[`Loader default snapshot 1`] = `
 >
   <WithStyles(CircularProgress)
     style={
-      Object {
+      {
         "width": 100,
       }
     }

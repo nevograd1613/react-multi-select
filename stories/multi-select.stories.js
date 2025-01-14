@@ -1,6 +1,6 @@
 import React from "react";
 import { action, storiesOf } from "@storybook/react";
-import ReactMultiSelect from "../src/components/multi_select";
+import ReactMultiSelect from "src/components/multi_select";
 import { boolean, number, withKnobs } from "@storybook/addon-knobs";
 import Readme from "../README.md";
 import withReadme from "storybook-readme/with-readme";
@@ -28,7 +28,7 @@ storiesOf("React Multi Select", module)
           showSelectAll={boolean("Show select all", true)}
         />
       );
-    })
+    }),
   )
   .add(
     "With different height",
@@ -47,7 +47,7 @@ storiesOf("React Multi Select", module)
           />
         </div>
       );
-    })
+    }),
   )
   .add(
     "Preselected Items",
@@ -62,7 +62,7 @@ storiesOf("React Multi Select", module)
           showSelectAll={boolean("Show select all", true)}
         />
       );
-    })
+    }),
   )
   .add(
     "With max selected items",
@@ -78,7 +78,7 @@ storiesOf("React Multi Select", module)
           messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
         />
       );
-    })
+    }),
   )
   .add(
     "With some of the items disabled",
@@ -93,7 +93,7 @@ storiesOf("React Multi Select", module)
           messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
         />
       );
-    })
+    }),
   )
   .add(
     "With Custom Messages",
@@ -108,7 +108,7 @@ storiesOf("React Multi Select", module)
           showSelectAll={boolean("Show select all", true)}
         />
       );
-    })
+    }),
   )
   .add(
     "With Custom Styling",
@@ -127,7 +127,7 @@ storiesOf("React Multi Select", module)
           selectAllHeight={40}
         />
       );
-    })
+    }),
   )
   .add(
     "Without Search and Select all",
@@ -143,7 +143,7 @@ storiesOf("React Multi Select", module)
           showSelectAll={false}
         />
       );
-    })
+    }),
   )
   .add(
     "With Large Data (7000 items)",
@@ -157,7 +157,7 @@ storiesOf("React Multi Select", module)
           showSelectAll={boolean("Show select all", true)}
         />
       );
-    })
+    }),
   )
   .add(
     "Without Selected Items",
@@ -172,7 +172,7 @@ storiesOf("React Multi Select", module)
           showSelectedItems={boolean("Show selected items", false)}
         />
       );
-    })
+    }),
   )
   .add(
     "With custom components",
@@ -191,17 +191,17 @@ storiesOf("React Multi Select", module)
           showSelectAll={boolean("Show select all", true)}
         />
       );
-    })
+    }),
   )
   .add(
     "With custom components and custom value",
     withReadme(Readme, () => {
       class ValueController extends React.Component {
         state = {
-          value: ""
+          value: "",
         };
 
-        onChange = value => {
+        onChange = (value) => {
           this.setState({ value });
         };
 
@@ -226,7 +226,7 @@ storiesOf("React Multi Select", module)
       }
 
       return <ValueController />;
-    })
+    }),
   )
   .add(
     "Item grouping",
@@ -240,7 +240,7 @@ storiesOf("React Multi Select", module)
           withGrouping
         />
       );
-    })
+    }),
   )
   .add(
     "Item grouping with Large Data (7000 items)",
@@ -254,7 +254,7 @@ storiesOf("React Multi Select", module)
           withGrouping
         />
       );
-    })
+    }),
   )
   .add(
     "Carousel Multi Select",
@@ -274,17 +274,17 @@ storiesOf("React Multi Select", module)
           messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
         />
       );
-    })
+    }),
   )
   .add(
     "Selected items search",
     withReadme(Readme, () => {
       class SelectedSearchController extends React.Component {
         state = {
-          value: ""
+          value: "",
         };
 
-        onChange = value => {
+        onChange = (value) => {
           this.setState({ value });
         };
 
@@ -294,7 +294,9 @@ storiesOf("React Multi Select", module)
               showSelectedItemsSearch={true}
               searchSelectedItemsValue={this.state.value}
               searchSelectedItemsChanged={this.onChange}
-              selectedItemsFilterFunction={id => item => item.id === Number(id)}
+              selectedItemsFilterFunction={(id) => (item) =>
+                item.id === Number(id)
+              }
               items={utils.items}
               loading={boolean("Loading", false)}
               onChange={action("onChange")}
@@ -306,14 +308,14 @@ storiesOf("React Multi Select", module)
       }
 
       return <SelectedSearchController />;
-    })
+    }),
   )
   .add(
     "With some of the locked items",
     withReadme(Readme, () => {
       const disabledItem = [
         { id: 0, label: "item 0", disabled: true },
-        { id: 5, label: "item 5", disabled: true }
+        { id: 5, label: "item 5", disabled: true },
       ];
 
       return (
@@ -321,7 +323,7 @@ storiesOf("React Multi Select", module)
           items={utils.withDisabledItems}
           selectedItems={disabledItem}
           showSelectedItemsSearch
-          isLocked={item => item.disabled}
+          isLocked={(item) => item.disabled}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -329,26 +331,26 @@ storiesOf("React Multi Select", module)
           messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
         />
       );
-    })
+    }),
   )
   .add(
     "With some of the locked items selected & unselected",
     withReadme(Readme, () => {
       const disabledItem = [
         { id: 2, label: "item 2", disabled: true },
-        { id: 5, label: "item 5", disabled: true }
+        { id: 5, label: "item 5", disabled: true },
       ];
       const items = [
         { id: 1, label: "item  1" },
         ...disabledItem,
-        { id: 3, label: "item  3" }
+        { id: 3, label: "item  3" },
       ];
       return (
         <ReactMultiSelect
           items={items}
           selectedItems={[disabledItem[0]]}
           showSelectedItemsSearch
-          isLocked={item => item.disabled}
+          isLocked={(item) => item.disabled}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -356,7 +358,7 @@ storiesOf("React Multi Select", module)
           messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
         />
       );
-    })
+    }),
   )
   .add(
     "As a controlled component",
@@ -365,8 +367,8 @@ storiesOf("React Multi Select", module)
         SINGLE_ITEM = [{ id: 1, label: "Item 1" }];
         MULTI_ITEMS = [
           { id: 2, label: "Item 2" },
-          { id: 4, label: "Item 4" }
-        ]
+          { id: 4, label: "Item 4" },
+        ];
 
         constructor(props) {
           super(props);
@@ -384,7 +386,10 @@ storiesOf("React Multi Select", module)
                 type="button"
                 onClick={() => {
                   this.setState({
-                    selectedItems: this.state.selectedItems.length > 1 ? this.SINGLE_ITEM : this.MULTI_ITEMS
+                    selectedItems:
+                      this.state.selectedItems.length > 1
+                        ? this.SINGLE_ITEM
+                        : this.MULTI_ITEMS,
                   });
                 }}
               />
@@ -402,5 +407,5 @@ storiesOf("React Multi Select", module)
       }
 
       return <SelectedItemsController />;
-    })
+    }),
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 
 import Column from "../../../src/components/column/column";
 
@@ -15,7 +15,7 @@ describe("Column", () => {
     const tree = renderer.render(
       <Column>
         <div>Some kind of child</div>
-      </Column>
+      </Column>,
     );
     expect(tree).toMatchSnapshot();
   });

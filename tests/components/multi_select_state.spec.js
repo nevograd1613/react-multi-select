@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import withMultiSelectState from "../../src/components/multi_select_state";
 
-const CustomComponent = props => <div {...props} />;
+const CustomComponent = (props) => <div {...props} />;
 
 const ITEM_1 = { id: 0, label: "item 0" };
 const ITEM_2 = { id: 1, label: "item 1" };
@@ -58,7 +58,7 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
     );
     wrapper.props().selectAllItems();
     wrapper.update();
@@ -90,7 +90,7 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
     );
     wrapper.props().selectAllItems();
     wrapper.update();
@@ -116,7 +116,7 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
     );
     wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
@@ -140,7 +140,7 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
     );
     wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
@@ -162,7 +162,7 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
     );
     wrapper.props().selectItem(ITEM_1.id);
     wrapper.update();
@@ -193,7 +193,7 @@ describe("withMultiSelectState", () => {
   test("can define selected items externally", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} selectedItems={[ITEM_2]} />
+      <ConditionalComponent items={items} selectedItems={[ITEM_2]} />,
     );
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_2]);
     wrapper.setProps({ selectedItems: [ITEM_3] });
@@ -275,7 +275,7 @@ describe("withMultiSelectState", () => {
       ITEM_1,
       ITEM_2,
       ITEM_3,
-      ITEM_4
+      ITEM_4,
     ]);
   });
 
@@ -412,7 +412,7 @@ describe("withMultiSelectState", () => {
   test("unselect all items with filter", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} selectedItems={items} />
+      <ConditionalComponent items={items} selectedItems={items} />,
     );
     wrapper.props().filterItems({ target: { value: "0" } });
     wrapper.update();
@@ -428,7 +428,7 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={items}
         searchValue=""
-      />
+      />,
     );
     expect(wrapper.state("filteredItems")).toEqual(items);
     wrapper.setProps({ searchValue: ITEM_1.label });
@@ -446,7 +446,7 @@ describe("withMultiSelectState", () => {
         showSelectedItemsSearch={true}
         searchSelectedItemsChanged={searchSelectedItemsChanged}
         selectedItems={selectedItems}
-      />
+      />,
     );
 
     wrapper.props().filterSelectedItems({ target: { value: "2" } });
@@ -464,7 +464,7 @@ describe("withMultiSelectState", () => {
         showSelectedItemsSearch={true}
         searchSelectedItemsChanged={searchSelectedItemsChanged}
         items={items}
-      />
+      />,
     );
 
     wrapper.props().selectAllItems();
@@ -472,7 +472,7 @@ describe("withMultiSelectState", () => {
     expect(wrapper.prop("filteredSelectedItems")).toEqual([
       ITEM_1,
       ITEM_2,
-      ITEM_3
+      ITEM_3,
     ]);
   });
 
@@ -486,7 +486,7 @@ describe("withMultiSelectState", () => {
         showSelectedItemsSearch={true}
         searchSelectedItemsChanged={searchSelectedItemsChanged}
         items={items}
-      />
+      />,
     );
 
     wrapper.props().selectAllItems();
@@ -505,7 +505,7 @@ describe("withMultiSelectState", () => {
         showSelectedItemsSearch={true}
         searchSelectedItemsChanged={searchSelectedItemsChanged}
         items={items}
-      />
+      />,
     );
 
     wrapper.props().selectAllItems();
@@ -521,7 +521,7 @@ describe("withMultiSelectState", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const searchSelectedItemsChanged = jest.fn();
     const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
-    const UserSearch = props => <input type="text" {...props} />;
+    const UserSearch = (props) => <input type="text" {...props} />;
 
     const wrapper = shallow(
       <ConditionalComponent
@@ -529,7 +529,7 @@ describe("withMultiSelectState", () => {
         searchSelectedItemsChanged={searchSelectedItemsChanged}
         searchRenderer={UserSearch}
         items={items}
-      />
+      />,
     );
 
     wrapper.props().selectAllItems();
@@ -548,7 +548,7 @@ describe("withMultiSelectState", () => {
         showSelectedItemsSearch={true}
         searchSelectedItemsChanged={searchSelectedItemsChanged}
         items={items}
-      />
+      />,
     );
 
     wrapper.props().selectItem(EVENT, ITEM_2.id);
@@ -566,7 +566,7 @@ describe("withMultiSelectState", () => {
         showSelectedItemsSearch={true}
         items={items}
         searchSelectedItemsValue=""
-      />
+      />,
     );
     wrapper.props().selectAllItems();
     expect(wrapper.state("filteredSelectedItems")).toEqual(items);
@@ -585,12 +585,12 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={[DISABLED_ITEM_23]}
         searchSelectedItemsValue=""
-      />
+      />,
     );
     wrapper.props().selectAllItems();
     expect(wrapper.state("filteredSelectedItems")).toEqual([
       ITEM_1,
-      DISABLED_ITEM_23
+      DISABLED_ITEM_23,
     ]);
   });
 
@@ -604,13 +604,13 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={[DISABLED_ITEM_23]}
         searchSelectedItemsValue=""
-      />
+      />,
     );
 
     wrapper.props().selectAllItems();
     expect(wrapper.state("filteredSelectedItems")).toEqual([
       ITEM_1,
-      DISABLED_ITEM_23
+      DISABLED_ITEM_23,
     ]);
 
     wrapper.props().unselectItems([ITEM_1.id, DISABLED_ITEM_23.id]);
@@ -627,7 +627,7 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={items}
         searchSelectedItemsValue=""
-      />
+      />,
     );
 
     wrapper.props().selectAllItems();
@@ -644,7 +644,7 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={[DISABLED_ITEM_23]}
         searchSelectedItemsValue=""
-      />
+      />,
     );
 
     wrapper.props().filterItems({ target: { value: DISABLED_ITEM_23.label } });
@@ -662,7 +662,7 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={[DISABLED_ITEM_23]}
         searchSelectedItemsValue=""
-      />
+      />,
     );
 
     wrapper.props().unselectItems([DISABLED_ITEM_23.id]);
@@ -679,7 +679,7 @@ describe("withMultiSelectState", () => {
         items={items}
         selectedItems={items}
         searchSelectedItemsValue=""
-      />
+      />,
     );
 
     wrapper
@@ -696,13 +696,13 @@ describe("withMultiSelectState", () => {
       { id: 1, label: "item 1", disabled: true },
       ITEM_3,
       { id: 3, label: "item 3", disabled: true },
-      { id: 4, label: "item 4" }
+      { id: 4, label: "item 4" },
     ];
 
     const selectedItems = [{ id: 1, label: "item 1", disabled: true }];
 
     const wrapper = shallow(
-      <ConditionalComponent items={items} selectedItems={selectedItems} />
+      <ConditionalComponent items={items} selectedItems={selectedItems} />,
     );
     wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
     wrapper.update();
@@ -712,7 +712,7 @@ describe("withMultiSelectState", () => {
       items[0],
       items[1],
       items[2],
-      items[4]
+      items[4],
     ]);
   });
 });

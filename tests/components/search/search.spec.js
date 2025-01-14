@@ -1,5 +1,5 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 import { shallow } from "enzyme";
 
 import Search from "../../../src/components/search/search";
@@ -16,7 +16,7 @@ describe("Search", () => {
   test("snapshot with placeholder", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <Search searchPlaceholder="new placeholder text" />
+      <Search searchPlaceholder="new placeholder text" />,
     );
     expect(tree).toMatchSnapshot();
   });

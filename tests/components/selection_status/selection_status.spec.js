@@ -1,9 +1,9 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 import { shallow } from "enzyme";
 
 import SelectionStatus from "../../../src/components/selection_status/selection_status";
-import styles from "../../../src/components/selection_status/selection_status.scss";
+import * as styles from "../../../src/components/selection_status/selection_status.scss";
 
 describe("SelectionStatus", () => {
   test("default snapshot", () => {
@@ -14,7 +14,7 @@ describe("SelectionStatus", () => {
   test("snapshot with custom noneSelectedMessage", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectionStatus noneSelectedMessage="custom no selection message" />
+      <SelectionStatus noneSelectedMessage="custom no selection message" />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -28,7 +28,7 @@ describe("SelectionStatus", () => {
   test("snapshot with selected items and custom clearAllMessage", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <SelectionStatus selected={[1, 2, 3]} clearAllMessage="custom message" />
+      <SelectionStatus selected={[1, 2, 3]} clearAllMessage="custom message" />,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -39,7 +39,7 @@ describe("SelectionStatus", () => {
       <SelectionStatus
         selected={[1, 2, 3]}
         selectedMessage="custom selected message"
-      />
+      />,
     );
     expect(tree).toMatchSnapshot();
   });

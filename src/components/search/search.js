@@ -3,7 +3,7 @@ import Icon from "@material-ui/core/Icon";
 import { MdSearch } from "react-icons/md";
 import PropTypes from "prop-types";
 
-import styles from "./search.scss";
+import * as styles from "./search.scss";
 
 const Search = ({ searchPlaceholder, searchIcon, onChange }) => {
   const IconRenderer = searchIcon;

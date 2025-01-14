@@ -8,7 +8,7 @@ exports[`SourceList can remove search 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -16,14 +16,14 @@ exports[`SourceList can remove search 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -36,14 +36,14 @@ exports[`SourceList can remove select all 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -56,7 +56,7 @@ exports[`SourceList custom itemRenderer 1`] = `
     onClick={undefined}
     renderer={[MockFunction mockedComponent]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -64,14 +64,14 @@ exports[`SourceList custom itemRenderer 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[MockFunction mockedComponent]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -84,7 +84,7 @@ exports[`SourceList custom messages 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Check all"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -92,14 +92,14 @@ exports[`SourceList custom messages 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage="No entries available..."
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -112,7 +112,7 @@ exports[`SourceList custom noItemsRenderer 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -120,14 +120,14 @@ exports[`SourceList custom noItemsRenderer 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[MockFunction mockedComponent]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -140,7 +140,7 @@ exports[`SourceList custom searchRenderer 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -148,14 +148,14 @@ exports[`SourceList custom searchRenderer 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -168,7 +168,7 @@ exports[`SourceList custom selectAllRenderer 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage={undefined}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -176,14 +176,14 @@ exports[`SourceList custom selectAllRenderer 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -196,7 +196,7 @@ exports[`SourceList default snapshot 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -204,14 +204,14 @@ exports[`SourceList default snapshot 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -224,7 +224,7 @@ exports[`SourceList passed filterItems 1`] = `
     onClick={[MockFunction filterItems]}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -232,14 +232,14 @@ exports[`SourceList passed filterItems 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -252,7 +252,7 @@ exports[`SourceList passed filteredItems with group 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -261,30 +261,30 @@ exports[`SourceList passed filteredItems with group 1`] = `
     isLocked={undefined}
     itemHeight={40}
     items={
-      Array [
-        Object {
+      [
+        {
           "disabled": true,
           "id": "group1",
           "isGroup": true,
           "label": "group1",
         },
-        Object {
+        {
           "group": "group1",
           "id": 1,
           "label": "item1",
         },
-        Object {
+        {
           "group": "group1",
           "id": 3,
           "label": "item3",
         },
-        Object {
+        {
           "disabled": true,
           "id": "group2",
           "isGroup": true,
           "label": "group2",
         },
-        Object {
+        {
           "group": "group2",
           "id": 2,
           "label": "item2",
@@ -297,7 +297,7 @@ exports[`SourceList passed filteredItems with group 1`] = `
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -310,7 +310,7 @@ exports[`SourceList passed selectAllItems 1`] = `
     onClick={[MockFunction selectAllItems]}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -318,14 +318,14 @@ exports[`SourceList passed selectAllItems 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -338,7 +338,7 @@ exports[`SourceList passed selectItem 1`] = `
     onClick={[MockFunction selectItem]}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -346,14 +346,14 @@ exports[`SourceList passed selectItem 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -367,7 +367,7 @@ exports[`SourceList passed selectedIds 1`] = `
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={
-      Array [
+      [
         1,
         2,
       ]
@@ -379,7 +379,7 @@ exports[`SourceList passed selectedIds 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
@@ -387,7 +387,7 @@ exports[`SourceList passed selectedIds 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectedIds={
-      Array [
+      [
         1,
         2,
       ]
@@ -404,7 +404,7 @@ exports[`SourceList passed selectedItems 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -412,14 +412,14 @@ exports[`SourceList passed selectedItems 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -429,8 +429,8 @@ exports[`SourceList passed source_list wrapped up to HOC withSearch 1`] = `
   calculatedHeight={400}
   disabled={false}
   filteredItems={
-    Array [
-      Object {
+    [
+      {
         "group": "group1",
         "id": 1,
         "label": "item1",
@@ -442,7 +442,7 @@ exports[`SourceList passed source_list wrapped up to HOC withSearch 1`] = `
   itemRenderer={[MockFunction mockedComponent]}
   listRenderer={[Function]}
   messages={
-    Object {
+    {
       "clearAllMessage": "Uncheck all",
       "noItemsMessage": "No entries available...",
       "noneSelectedMessage": "Nothing",
@@ -456,12 +456,12 @@ exports[`SourceList passed source_list wrapped up to HOC withSearch 1`] = `
   selectAllItems={[MockFunction selectAllItems]}
   selectAllRenderer={[Function]}
   selectedIds={
-    Array [
+    [
       1,
     ]
   }
   selectedItems={
-    Array [
+    [
       1,
     ]
   }
@@ -485,7 +485,7 @@ exports[`SourceList show max selection tooltip 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -493,14 +493,14 @@ exports[`SourceList show max selection tooltip 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -513,7 +513,7 @@ exports[`SourceList will pass itemHeight 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -521,14 +521,14 @@ exports[`SourceList will pass itemHeight 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={10}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -541,7 +541,7 @@ exports[`SourceList will pass selectAllHeight 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -549,14 +549,14 @@ exports[`SourceList will pass selectAllHeight 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={10}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -569,7 +569,7 @@ exports[`SourceList will pass selectAllHeight without itemHeight 1`] = `
     onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
-    selectedIds={Array []}
+    selectedIds={[]}
   />
   <ItemsList
     disabled={false}
@@ -577,14 +577,14 @@ exports[`SourceList will pass selectAllHeight without itemHeight 1`] = `
     height={400}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     listRenderer={[Function]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
     onClick={undefined}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;

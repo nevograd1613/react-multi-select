@@ -1,5 +1,5 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 import { shallow, mount } from "enzyme";
 
 import ItemsList from "../../../src/components/list/items_list";
@@ -45,11 +45,11 @@ describe("ItemsList", () => {
 
   test("disabledItemsTooltip property injected", () => {
     const wrapper = mount(
-      <ItemsList disabledItemsTooltip={"You can select up to 4 items"} />
+      <ItemsList disabledItemsTooltip={"You can select up to 4 items"} />,
     );
     const innerList = wrapper.find(InnerList);
     expect(innerList.prop("disabledItemsTooltip")).toBe(
-      "You can select up to 4 items"
+      "You can select up to 4 items",
     );
   });
 });

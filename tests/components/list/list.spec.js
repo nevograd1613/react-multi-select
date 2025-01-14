@@ -4,16 +4,19 @@ import { mount } from "enzyme";
 import List from "../../../src/components/list/list";
 import Item from "../../../src/components/items/item";
 import NoItems from "../../../src/components/items/no_items";
-import ShallowRenderer from "react-test-renderer/shallow";
+import ShallowRenderer from "react-shallow-renderer";
 
-const items = [{ id: 5, label: "item 0" }, { id: 12, label: "item 1" }];
+const items = [
+  { id: 5, label: "item 0" },
+  { id: 12, label: "item 1" },
+];
 const itemsWithDisabled = [
   { id: 5, label: "item 0", disabled: true },
-  { id: 12, label: "item 1" }
+  { id: 12, label: "item 1" },
 ];
 const CUSTOM_MESSAGE = "custom message";
 const CustomComponent = () => <div>Custom Component</div>;
-const isLocked = item => item.disabled;
+const isLocked = (item) => item.disabled;
 
 describe("List", () => {
   test("default snapshot", () => {
@@ -60,7 +63,7 @@ describe("List", () => {
 
   test("can display custom NoItems component", () => {
     const wrapper = mount(
-      <List width={100} noItemsRenderer={CustomComponent} />
+      <List width={100} noItemsRenderer={CustomComponent} />,
     );
     const noItems = wrapper.find(CustomComponent);
     expect(noItems.length).toBe(1);
@@ -68,7 +71,7 @@ describe("List", () => {
 
   test("does not shows NoItems if items are present", () => {
     const wrapper = mount(
-      <List width={100} items={items} isLocked={isLocked} />
+      <List width={100} items={items} isLocked={isLocked} />,
     );
     const noItems = wrapper.find(NoItems);
     expect(noItems.length).toBe(0);
@@ -76,7 +79,7 @@ describe("List", () => {
 
   test("shows Items if items are present", () => {
     const wrapper = mount(
-      <List width={100} items={items} isLocked={isLocked} />
+      <List width={100} items={items} isLocked={isLocked} />,
     );
     const itemsWrapper = wrapper.find(Item);
     expect(itemsWrapper.length).toBe(2);
@@ -84,7 +87,7 @@ describe("List", () => {
 
   test("shows checked Items if items are present", () => {
     const wrapper = mount(
-      <List width={100} items={items} selectedIds={[12]} isLocked={isLocked} />
+      <List width={100} items={items} selectedIds={[12]} isLocked={isLocked} />,
     );
     const itemsWrapper = wrapper.find(Item);
     expect(itemsWrapper.at(0).prop("checked")).toBe(false);
@@ -98,7 +101,7 @@ describe("List", () => {
         items={items}
         renderer={CustomComponent}
         isLocked={isLocked}
-      />
+      />,
     );
     const itemsWrapper = wrapper.find(CustomComponent);
     expect(itemsWrapper.length).toBe(2);
@@ -107,7 +110,7 @@ describe("List", () => {
   test("click will trigger onClick", () => {
     const onClick = jest.fn();
     const wrapper = mount(
-      <List width={100} items={items} onClick={onClick} isLocked={isLocked} />
+      <List width={100} items={items} onClick={onClick} isLocked={isLocked} />,
     );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
@@ -117,7 +120,7 @@ describe("List", () => {
   test("click will trigger onClick with id param", () => {
     const onClick = jest.fn();
     const wrapper = mount(
-      <List width={100} items={items} onClick={onClick} isLocked={isLocked} />
+      <List width={100} items={items} onClick={onClick} isLocked={isLocked} />,
     );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
@@ -127,7 +130,7 @@ describe("List", () => {
   test("click will not trigger onClick if disabled", () => {
     const onClick = jest.fn();
     const wrapper = mount(
-      <List width={100} items={items} onClick={onClick} disabled={true} />
+      <List width={100} items={items} onClick={onClick} disabled={true} />,
     );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
@@ -142,7 +145,7 @@ describe("List", () => {
         items={itemsWithDisabled}
         onClick={onClick}
         isLocked={isLocked}
-      />
+      />,
     );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
@@ -159,7 +162,7 @@ describe("List", () => {
         onClick={onClick}
         disabled={true}
         isLocked={isLocked}
-      />
+      />,
     );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
@@ -173,7 +176,7 @@ describe("List", () => {
         items={items.slice(0, 1)}
         disabledItemsTooltip={"You can select up to 4 items"}
         disabled={true}
-      />
+      />,
     );
     const row = wrapper.find(".list_item");
     expect(row.prop("title")).toBe("You can select up to 4 items");
@@ -187,7 +190,7 @@ describe("List", () => {
         disabledItemsTooltip={"You can select up to 4 items"}
         disabled={false}
         isLocked={isLocked}
-      />
+      />,
     );
     const row = wrapper.find(".list_item");
     expect(row.prop("title")).toBe(undefined);
@@ -200,7 +203,7 @@ describe("List", () => {
         selectedIds={[12, 13]}
         selectedItems={[{ id: 13, label: "item 13", disabled: true }]}
         isLocked={isLocked}
-      />
+      />,
     );
 
     const itemsWrapper = wrapper.find(Item);
@@ -214,7 +217,7 @@ describe("List", () => {
         width={100}
         items={[{ id: 13, label: "item 13", disabled: true }, ...items]}
         isLocked={isLocked}
-      />
+      />,
     );
 
     const itemsWrapper = wrapper.find(Item);
@@ -223,7 +226,7 @@ describe("List", () => {
   });
   test("show Item dose'nt disabled & dose'nt checked", () => {
     const wrapper = mount(
-      <List width={100} items={items} isLocked={isLocked} />
+      <List width={100} items={items} isLocked={isLocked} />,
     );
 
     const itemsWrapper = wrapper.find(Item);

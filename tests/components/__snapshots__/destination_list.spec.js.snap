@@ -2,19 +2,19 @@
 
 exports[`DestinationList Case disabled search with destination list 1`] = `
 <DestinationList
-  filteredItems={Array []}
+  filteredItems={[]}
   height={400}
   itemHeight={40}
   listRenderer={[Function]}
   messages={
-    Object {
-      "messages": Object {
+    {
+      "messages": {
         "searchPlaceholder": "Search",
       },
     }
   }
   noItemsRenderer={[Function]}
-  selectedIds={Array []}
+  selectedIds={[]}
   selectedItemRenderer={[Function]}
   selectionStatusRenderer={[Function]}
   withGrouping={false}
@@ -23,19 +23,19 @@ exports[`DestinationList Case disabled search with destination list 1`] = `
 
 exports[`DestinationList Case include search with destination list 1`] = `
 <DestinationList
-  filteredItems={Array []}
+  filteredItems={[]}
   height={400}
   itemHeight={40}
   listRenderer={[Function]}
   messages={
-    Object {
-      "messages": Object {
+    {
+      "messages": {
         "searchPlaceholder": "Search",
       },
     }
   }
   noItemsRenderer={[Function]}
-  selectedIds={Array []}
+  selectedIds={[]}
   selectedItemRenderer={[Function]}
   selectionStatusRenderer={[Function]}
   withGrouping={false}
@@ -55,7 +55,7 @@ exports[`DestinationList custom messages 1`] = `
     clearAll={undefined}
     clearAllMessage="Uncheck all"
     noneSelectedMessage="Nothing"
-    selected={Array []}
+    selected={[]}
     selectedMessage="Checked"
   />
   <ItemsList
@@ -63,13 +63,13 @@ exports[`DestinationList custom messages 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage="No entries available..."
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -80,7 +80,7 @@ exports[`DestinationList custom noItemsRenderer 1`] = `
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -88,13 +88,13 @@ exports[`DestinationList custom noItemsRenderer 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[MockFunction mockedComponent]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -105,7 +105,7 @@ exports[`DestinationList custom selectedItemRenderer 1`] = `
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -113,13 +113,13 @@ exports[`DestinationList custom selectedItemRenderer 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[MockFunction mockedComponent]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -130,7 +130,7 @@ exports[`DestinationList custom selectionStatusRenderer 1`] = `
     clearAll={undefined}
     clearAllMessage={undefined}
     noneSelectedMessage={undefined}
-    selected={Array []}
+    selected={[]}
     selectedMessage={undefined}
   />
   <ItemsList
@@ -138,13 +138,13 @@ exports[`DestinationList custom selectionStatusRenderer 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -155,7 +155,7 @@ exports[`DestinationList default snapshot 1`] = `
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -163,13 +163,13 @@ exports[`DestinationList default snapshot 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -180,7 +180,7 @@ exports[`DestinationList passed clearAll 1`] = `
     clearAll={[MockFunction clearAll]}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -188,13 +188,13 @@ exports[`DestinationList passed clearAll 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -206,7 +206,7 @@ exports[`DestinationList passed selectedIds 1`] = `
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
     selected={
-      Array [
+      [
         1,
         2,
       ]
@@ -218,13 +218,13 @@ exports[`DestinationList passed selectedIds 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -235,7 +235,7 @@ exports[`DestinationList passed selectedItems 1`] = `
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -243,13 +243,13 @@ exports[`DestinationList passed selectedItems 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -260,7 +260,7 @@ exports[`DestinationList passed selectedItems with grouping 1`] = `
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -268,13 +268,13 @@ exports[`DestinationList passed selectedItems with grouping 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -285,7 +285,7 @@ exports[`DestinationList passed selectedItems with grouping and empty items 1`] 
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -293,13 +293,13 @@ exports[`DestinationList passed selectedItems with grouping and empty items 1`] 
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;
@@ -310,7 +310,7 @@ exports[`DestinationList passed unselectItems 1`] = `
     clearAll={undefined}
     clearAllMessage="Clear All"
     noneSelectedMessage="None Selected"
-    selected={Array []}
+    selected={[]}
     selectedMessage="selected"
   />
   <ItemsList
@@ -318,13 +318,13 @@ exports[`DestinationList passed unselectItems 1`] = `
     height={355}
     isLocked={undefined}
     itemHeight={40}
-    items={Array []}
+    items={[]}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
     onClick={[Function]}
     renderer={[Function]}
-    selectedIds={Array []}
+    selectedIds={[]}
   />
 </Column>
 `;

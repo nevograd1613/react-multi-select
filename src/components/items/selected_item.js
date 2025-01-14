@@ -4,7 +4,7 @@ import { MdClose } from "react-icons/md";
 import IconButton from "@material-ui/core/IconButton";
 import ItemLabel from "./item_label";
 import classnames from "classnames";
-import styles from "./selected_item.scss";
+import * as styles from "./selected_item.scss";
 
 const SelectedItem = ({ item, height, group, disabled }) => (
   <div

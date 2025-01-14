@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./no_items.scss";
+import * as styles from "./no_items.scss";
 
 const NoItems = ({ noItemsMessage }) => (
   <div className={styles.no_items}>{noItemsMessage}</div>
 );
 
 NoItems.propTypes = {
-  noItemsMessage: PropTypes.string
+  noItemsMessage: PropTypes.string,
 };
 
 NoItems.defaultProps = {
-  noItemsMessage: "No Items..."
+  noItemsMessage: "No Items...",
 };
 
 export default NoItems;
